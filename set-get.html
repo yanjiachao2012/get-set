@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		function Observer(val){
+			var data=val
+			this.__defineGetter__("data",function(){
+				return data;
+				
+			});
+			this.__defineSetter__("data",function(val){
+				data=val
+			});
+		}
+
+		let app1=new Observer({
+			name:'yanjiachao',
+			age:25
+		})
+		let app4=new Observer({
+			subject:'yanjiachao',
+			money:25
+		})
+	</script>
+</body>
+</html>
